@@ -13,7 +13,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dependency.locations.enabled>false</dependency.locations.enabled>
-        <!--        <checkstyle.config.location>checkstyle.xml</checkstyle.config.location>-->
+<!--        <checkstyle.config.location>checkstyle.xml</checkstyle.config.location>-->
     </properties>
 
 
@@ -24,24 +24,12 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/findbugs-maven-plugin -->
-        <dependency>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>findbugs-maven-plugin</artifactId>
-            <version>3.0.3</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.puppycrawl.tools</groupId>
-            <artifactId>checkstyle</artifactId>
-            <version>8.29</version>
-        </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>net.sourceforge.cobertura</groupId>-->
-        <!--            <artifactId>cobertura</artifactId>-->
-        <!--            <version>2.1.1</version>-->
-        <!--            <scope>test</scope>-->
-        <!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>net.sourceforge.cobertura</groupId>-->
+<!--            <artifactId>cobertura</artifactId>-->
+<!--            <version>2.1.1</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
     </dependencies>
     <build>
         <plugins>
@@ -84,19 +72,19 @@
                     </instrumentation>
                     <check>
                         <!--每个类的分支覆盖率-->
-                        <!--                        <branchRate>85</branchRate>-->
+<!--                        <branchRate>85</branchRate>-->
                         <!--每个类的代码行覆盖率-->
-                        <!--                        <lineRate>85</lineRate>-->
+<!--                        <lineRate>85</lineRate>-->
                         <!--校验失败则中止.即为true时如果校验失败则打包执行失败,反之则只是打出告警日志-->
-                        <!--                        <haltOnFailure>true</haltOnFailure>-->
+<!--                        <haltOnFailure>true</haltOnFailure>-->
                         <!--整体的分支覆盖率-->
-                        <!--                        <totalBranchRate>85</totalBranchRate>-->
+<!--                        <totalBranchRate>85</totalBranchRate>-->
                         <!--整体的代码行覆盖率-->
-                        <!--                        <totalLineRate>85</totalLineRate>-->
+<!--                        <totalLineRate>85</totalLineRate>-->
                         <!--每个包的分支行覆盖率-->
-                        <!--                        <packageBranchRate>85</packageBranchRate>-->
+<!--                        <packageBranchRate>85</packageBranchRate>-->
                         <!--每个包的代码行覆盖率-->
-                        <!--                        <packageLineRate>85</packageLineRate>-->
+<!--                        <packageLineRate>85</packageLineRate>-->
                     </check>
                 </configuration>
             </plugin>
@@ -111,7 +99,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>2.9</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -126,7 +114,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.0.5</version>
                 <configuration>
                     <!-- 设置分析工作的等级，可以为Min、Default和Max -->
                     <effort>Low</effort>
@@ -139,7 +127,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.1.2</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -151,7 +139,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.14.0</version>
                 <configuration>
                     <!--                    <linkXref>true</linkXref>-->
                     <sourceEncoding>utf-8</sourceEncoding>
